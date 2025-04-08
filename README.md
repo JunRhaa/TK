@@ -50,3 +50,23 @@ public void Calculate()
 - Ввод отрицательных значений (автоматическое ограничение до 0).
 - Ввод значений больше 25 (автоматическое ограничение до 25).
 - Обработка некорректных данных (например, ввод текста вместо числа).
+**Пример теста:**
+  ```csharp
+  [TestMethod]
+public void CalculateGrade_MaxScores_Returns5()
+{
+    // Arrange
+    var vm = new MainViewModel
+    {
+        Score1 = 25,
+        Score2 = 25,
+        Score3 = 25,
+        Score4 = 25
+    };
+
+    // Act
+    vm.Calculate();
+
+    // Assert
+    Assert.AreEqual("Сумма: 100\nОценка: 5", vm.ResultText);
+}
