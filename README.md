@@ -53,8 +53,8 @@ public void Calculate()
 **Пример теста:**
   ```csharp
   [TestMethod]
-public void CalculateGrade_MaxScores_Returns5()
-{
+  public void CalculateGrade_MaxScores_Returns5()
+  {
     // Arrange
     var vm = new MainViewModel
     {
@@ -69,4 +69,5 @@ public void CalculateGrade_MaxScores_Returns5()
 
     // Assert
     Assert.AreEqual("Сумма: 100\nОценка: 5", vm.ResultText);
-}
+  }
+```
